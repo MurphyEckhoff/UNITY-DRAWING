@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEngine;
+
+public class ObjectPlacer : MonoBehaviour
+{
+    public GameObject Boxprefab;
+    //define Boxprefab as the 
+    void Update()
+    {
+         if (Input.GetMouseButton(0))
+         {
+            ShootBox();
+         }
+    }
+}
+void ShootBox()
+{
+    Instantiate(Boxprefab, Input.mousePosition, quaternion.identity);
+}
